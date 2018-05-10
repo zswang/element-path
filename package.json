@@ -1,6 +1,6 @@
 {
   "name": "element-path",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Path of element get and query.",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -16,6 +16,7 @@
     "name": "zswang",
     "url": "http://weibo.com/zswang"
   },
+  "repository": "https://github.com/zswang/element-path.git",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
