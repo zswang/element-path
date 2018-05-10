@@ -7,9 +7,10 @@ export interface IElementPathOptions {
  * Path of element get and query.
  * @author
  *   zswang (http://weibo.com/zswang)
- * @version 0.0.2
+ * @version 0.0.4
  * @date 2018-05-10
  */
+/*<function name="ElementPath">*/
 export class ElementPath {
   options: IElementPathOptions
   constructor(options: IElementPathOptions) {
@@ -91,4 +92,4 @@ export class ElementPath {
     })
     return result
   }
-}
+} /*</function>*/

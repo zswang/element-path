@@ -21,6 +21,7 @@ export interface IElementPathOptions {
  */
 /*</jdists>*/
 
+/*<function name="ElementPath">*/
 export class ElementPath {
   options: IElementPathOptions
 
@@ -106,4 +107,4 @@ export class ElementPath {
     })
     return result
   }
-}
+} /*</function>*/
