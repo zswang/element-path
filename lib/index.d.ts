@@ -9,8 +9,8 @@ export interface IElementPathOptions {
  * Path of element get and query.
  * @author
  *   zswang (http://weibo.com/zswang)
- * @version 0.0.6
- * @date 2018-05-11
+ * @version 0.0.7
+ * @date 2018-05-12
  */
 export declare class ElementPath {
     options: IElementPathOptions;

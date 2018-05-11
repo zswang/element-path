@@ -60,6 +60,7 @@ export class ElementPath {
      ```
    */
   get(node: Node): string {
+    if (!node) return ''
     if (node === document.documentElement) return 'html'
     if (node === document.body) return 'body'
 
