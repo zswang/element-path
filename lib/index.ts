@@ -7,8 +7,8 @@ export interface IElementPathOptions {
  * Path of element get and query.
  * @author
  *   zswang (http://weibo.com/zswang)
- * @version 0.0.5
- * @date 2018-05-10
+ * @version 0.0.6
+ * @date 2018-05-11
  */
 /*<function name="ElementPath">*/
 export class ElementPath {
@@ -17,6 +17,7 @@ export class ElementPath {
     this.options = { tags: {}, ...options }
     if (typeof this.options.tags === 'string') {
       this.options.tags = this.options.tags
+        .trim()
         .split(/[\s,]+/)
         .reduce((tags, tagName, index) => {
           let char = String.fromCharCode(65 /* A */ + index)

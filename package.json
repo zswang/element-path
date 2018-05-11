@@ -1,6 +1,6 @@
 {
   "name": "element-path",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Path of element get and query.",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",

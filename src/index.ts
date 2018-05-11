@@ -29,6 +29,7 @@ export class ElementPath {
     this.options = { tags: {}, ...options }
     if (typeof this.options.tags === 'string') {
       this.options.tags = this.options.tags
+        .trim()
         .split(/[\s,]+/)
         .reduce((tags, tagName, index) => {
           let char = String.fromCharCode(65 /* A */ + index)
