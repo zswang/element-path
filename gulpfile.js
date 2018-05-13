@@ -12,8 +12,8 @@ const merge2 = require('merge2')
 const replace = require('gulp-replace')
 const rename = require('gulp-rename')
 
-gulp.task('build', function() {
-  var tsResult = gulp
+gulp.task('build', () => {
+  let tsResult = gulp
     .src('./src/*.ts')
     .pipe(jdists())
     .pipe(gulp.dest('./lib'))
@@ -35,6 +35,9 @@ gulp.task('build', function() {
         )
       )
       .pipe(
+        replace(/^\s*var\s+__assign\s+=\s+/m, '/* istanbul ignore next */\n$&')
+      )
+      .pipe(
         replace(
           /(define\(\["require",\s*"exports"\],\s*factory\);\s*\})/,
           `$1 else {
@@ -54,7 +57,7 @@ gulp.task('build', function() {
   ])
 })
 
-gulp.task('uglify', function() {
+gulp.task('uglify', () => {
   gulp
     .src(`lib/index.js`)
     .pipe(uglify())
@@ -62,7 +65,7 @@ gulp.task('uglify', function() {
     .pipe(gulp.dest('lib'))
 })
 
-gulp.task('example', function() {
+gulp.task('example', () => {
   return gulp
     .src('src/**.ts')
     .pipe(
